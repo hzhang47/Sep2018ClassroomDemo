@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Optimization;
 using System.Web.UI;
 
-namespace Chinook
+namespace WebApp
 {
     public class BundleConfig
     {

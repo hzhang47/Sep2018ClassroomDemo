@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{86455725-C956-4EBC-ABED-D0C5553F809E}</ProjectGuid>
+    <ProjectGuid>{394AC50F-B28A-4DC4-9192-68C5C5177D2F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chinook</RootNamespace>
-    <AssemblyName>Chinook</AssemblyName>
+    <RootNamespace>WebApp</RootNamespace>
+    <AssemblyName>WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -255,6 +255,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.Data\Chinook.Data.csproj">
+      <Project>{78cffa4c-fa80-4344-a594-37d9242e3c41}</Project>
+      <Name>Chinook.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinookSystem\ChinookSystem.csproj">
+      <Project>{ea93c778-f638-4786-a8bb-55846086d616}</Project>
+      <Name>ChinookSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -268,9 +278,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50222</DevelopmentServerPort>
+          <DevelopmentServerPort>50264</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50222/</IISUrl>
+          <IISUrl>http://localhost:50264/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

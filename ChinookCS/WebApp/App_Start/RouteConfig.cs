@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.Routing;
 using Microsoft.AspNet.FriendlyUrls;
 
-namespace Chinook
+namespace WebApp
 {
     public static class RouteConfig
     {

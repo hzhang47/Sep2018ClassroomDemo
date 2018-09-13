@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Chinook
+namespace WebApp
 {
 
 
-    public partial class Contact
+    public partial class _Default
     {
     }
 }

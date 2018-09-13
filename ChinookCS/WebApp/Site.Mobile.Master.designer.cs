@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Chinook {
+namespace WebApp {
     
     
     public partial class Site_Mobile {
