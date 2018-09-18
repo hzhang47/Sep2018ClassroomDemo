@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,43 +7,43 @@ using System.Threading.Tasks;
 #region Additional Namespaces
 using Chinook.Data.Entities;
 using ChinookSystem.DAL;
+using System.ComponentModel;  //ODS
 #endregion
 
 namespace ChinookSystem.BLL
 {
+    [DataObject]
     public class AlbumController
     {
-        [DataObject]
-        public class ArtistController
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<Album> Album_List()
         {
-            [DataObjectMethod(DataObjectMethodType.Select, false)]
-            public List<Album> Album_List()
+            using (var context = new ChinookContext())
             {
-                using (var context = new ChinookContext())
-                {
-                    return context.Albums.ToList();
-                }
+                return context.Albums.ToList();
             }
+        }
 
-            [DataObjectMethod(DataObjectMethodType.Select, false)]
-            public Album Album_GetByAlbumID(int albumid)
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public Album Album_Find(int albumid)
+        {
+            using (var context = new ChinookContext())
             {
-                using (var context = new ChinookContext())
-                {
-                    return context.Albums.Find(albumid);
-                }
+                return context.Albums.Find(albumid);
             }
+        }
 
-            public List<Album> Album_GetByArtistID(int artistid)
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<Album> Album_GetByArtistId(int artistid)
+        {
+            using (var context = new ChinookContext())
             {
-                using (var context = new ChinookContext())
-                {
-                    var results = from arowon in context.Albums
-                                  where arowon.ArtistId.Equals(artistid)
-                                  select arowon;
-                    return results.ToList();    
-                }
+                var results = from aRowOn in context.Albums
+                              where aRowOn.ArtistId.Equals(artistid)
+                              select aRowOn;
+                return results.ToList();
             }
         }
     }
 }
+

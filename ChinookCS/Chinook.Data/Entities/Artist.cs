@@ -8,18 +8,15 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 #endregion
-
 namespace Chinook.Data.Entities
 {
     [Table("Artists")]
     public class Artist
     {
         [Key]
-        //[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //[Key, Column(Order = 1)]
         public int ArtistId { get; set; }
         [Required(ErrorMessage = "Name is required.")]
-        [StringLength(120, ErrorMessage = "Name is limited to 120 characters.")]
+        [StringLength(120,ErrorMessage ="Name is limited to 120 characters")]
         public string Name { get; set; }
 
         //navigation properties

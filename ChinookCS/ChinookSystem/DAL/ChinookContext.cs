@@ -13,7 +13,7 @@ namespace ChinookSystem.DAL
 {
     internal class ChinookContext:DbContext
     {
-        public ChinookContext() : base("ChinookDB")
+        public ChinookContext():base("ChinookDB")
         {
 
         }

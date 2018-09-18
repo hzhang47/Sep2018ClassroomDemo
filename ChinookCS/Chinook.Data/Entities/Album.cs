@@ -16,20 +16,16 @@ namespace Chinook.Data.Entities
     {
         [Key]
         public int AlbumId { get; set; }
-
         [Required(ErrorMessage = "Title is required.")]
-        [StringLength(160, ErrorMessage = "Title is limited to 160 characters.")]
+        [StringLength(160, ErrorMessage = "Title is limited to 160 characters")]
         public string Title { get; set; }
-
-        public int ArtistId { get; set; }
-
+        public int ArtistId {get;set;}
         public int ReleaseYear { get; set; }
-
-        [StringLength(50, ErrorMessage = "Release label is limited to 160 characters.")]
+        [StringLength(50, ErrorMessage = "Release Label is limited to 50 characters")]
         public string ReleaseLabel { get; set; }
 
-        //navigation properties
+        //navigational properties
         public virtual Artist Artist { get; set; }
-        //public virtual ICollection<Track> Tracks { get; set; }
+        
     }
 }
