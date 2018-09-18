@@ -221,6 +221,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="SamplePages\ODSCRUD.aspx" />
     <Content Include="SamplePages\ODSQuery.aspx" />
     <Content Include="SamplePages\QueryListView.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -394,6 +395,13 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SamplePages\ODSCRUD.aspx.cs">
+      <DependentUpon>ODSCRUD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamplePages\ODSCRUD.aspx.designer.cs">
+      <DependentUpon>ODSCRUD.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SamplePages\ODSQuery.aspx.cs">
       <DependentUpon>ODSQuery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
