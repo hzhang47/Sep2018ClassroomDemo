@@ -10,7 +10,7 @@
 namespace WebApp.SamplePages {
     
     
-    public partial class AlbumsTracksDetail {
+    public partial class EmployeeList {
         
         /// <summary>
         /// MessageUserControl control.

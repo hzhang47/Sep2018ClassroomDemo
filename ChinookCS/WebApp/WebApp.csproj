@@ -223,6 +223,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="SamplePages\AlbumDetails.aspx" />
     <Content Include="SamplePages\AlbumsTracksDetail.aspx" />
+    <Content Include="SamplePages\EmployeeList.aspx" />
     <Content Include="SamplePages\ODSCRUD.aspx" />
     <Content Include="SamplePages\ODSQuery.aspx" />
     <Content Include="SamplePages\QueryListView.aspx" />
@@ -412,6 +413,13 @@
     </Compile>
     <Compile Include="SamplePages\AlbumsTracksDetail.aspx.designer.cs">
       <DependentUpon>AlbumsTracksDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePages\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamplePages\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
     </Compile>
     <Compile Include="SamplePages\ODSCRUD.aspx.cs">
       <DependentUpon>ODSCRUD.aspx</DependentUpon>

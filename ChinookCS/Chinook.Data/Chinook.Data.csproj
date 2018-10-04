@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTOs\AlbumInfo.cs" />
+    <Compile Include="DTOs\SupportEmpolyee.cs" />
     <Compile Include="Entities\Album.cs" />
     <Compile Include="Entities\Artist.cs" />
     <Compile Include="Entities\Customer.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Entities\Playlist.cs" />
     <Compile Include="Entities\PlaylistTrack.cs" />
     <Compile Include="Entities\Track.cs" />
+    <Compile Include="POCOs\PlayListCustomer.cs" />
     <Compile Include="POCOs\PlaylistSummary.cs" />
     <Compile Include="POCOs\TracksInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
