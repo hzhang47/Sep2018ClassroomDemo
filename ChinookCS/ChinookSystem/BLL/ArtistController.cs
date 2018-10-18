@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Chinook.Data.Entities;
 using ChinookSystem.DAL;
 using System.ComponentModel; //ODS
+using Chinook.Data.POCOs;
 #endregion
 
 namespace ChinookSystem.BLL
@@ -31,6 +32,22 @@ namespace ChinookSystem.BLL
             using (var context = new ChinookContext())
             {
                 return context.Artists.Find(artistid);
+            }
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<SelectionList> List_ArtistNames()
+        {
+            using (var context = new ChinookContext())
+            {
+                var results = from x in context.Artists
+                              orderby x.Name
+                              select new SelectionList
+                              {
+                                  IDValueField = x.ArtistId,
+                                  DisplayText = x.Name
+                              };
+                return results.ToList();
             }
         }
     }

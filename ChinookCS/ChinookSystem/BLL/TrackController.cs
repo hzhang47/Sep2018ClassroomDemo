@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Chinook.Data.Entities;
 using ChinookSystem.DAL;
 using System.ComponentModel;  //ODS
+using Chinook.Data.POCOs;
 #endregion
 
 namespace ChinookSystem.BLL
@@ -45,6 +46,19 @@ namespace ChinookSystem.BLL
                 return results.ToList();
             }
         }
+
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<TrackList> List_TracksForPlaylistSelection(string tracksby, int argid)
+        {
+            using (var context = new ChinookContext())
+            {
+                List<TrackList> results = null;
+
+                //code to go here
+
+                return results;
+            }
+        }//eom
     }
 }
 

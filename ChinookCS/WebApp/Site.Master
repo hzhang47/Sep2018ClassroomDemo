@@ -95,6 +95,8 @@
                                 </asp:MenuItem>
                                 <asp:MenuItem Text="Nested Repeater" NavigateUrl="~/SamplePages/AlbumsTracksDetail.aspx">
                                 </asp:MenuItem>
+                                <asp:MenuItem Text="OLTP" NavigateUrl="~/SamplePages/ManagePlaylist.aspx">
+                                </asp:MenuItem>
                             </asp:MenuItem>
 
                             <asp:MenuItem Text="Contact" NavigateUrl="~/Contact.aspx"></asp:MenuItem>

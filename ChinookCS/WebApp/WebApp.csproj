@@ -224,6 +224,7 @@
     <Content Include="SamplePages\AlbumDetails.aspx" />
     <Content Include="SamplePages\AlbumsTracksDetail.aspx" />
     <Content Include="SamplePages\EmployeeList.aspx" />
+    <Content Include="SamplePages\ManagePlaylist.aspx" />
     <Content Include="SamplePages\ODSCRUD.aspx" />
     <Content Include="SamplePages\ODSQuery.aspx" />
     <Content Include="SamplePages\QueryListView.aspx" />
@@ -420,6 +421,13 @@
     </Compile>
     <Compile Include="SamplePages\EmployeeList.aspx.designer.cs">
       <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePages\ManagePlaylist.aspx.cs">
+      <DependentUpon>ManagePlaylist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamplePages\ManagePlaylist.aspx.designer.cs">
+      <DependentUpon>ManagePlaylist.aspx</DependentUpon>
     </Compile>
     <Compile Include="SamplePages\ODSCRUD.aspx.cs">
       <DependentUpon>ODSCRUD.aspx</DependentUpon>
