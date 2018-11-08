@@ -17,6 +17,23 @@ namespace Jan2018DemoWebsite.SamplePages
         protected void Page_Load(object sender, EventArgs e)
         {
             TracksSelectionList.DataSource = null;
+            if (Request.IsAuthenticated)
+            {
+                if (User.IsInRole("Administrators") || User.IsInRole("Customers"))
+                {
+                    MessageUserControl.ShowInfo("Success", "You may continue");
+                }
+                else
+                {
+                    //redirect ot a page that states no authorization fot the request action
+                    Response.Redirect("~/Default.aspx");
+                }
+            }
+            else
+            {
+                //redieect to login page
+                Response.Redirect("~/Account/Login.aspx");
+            }
         }
 
         protected void CheckForException(object sender, ObjectDataSourceStatusEventArgs e)
@@ -85,7 +102,7 @@ namespace Jan2018DemoWebsite.SamplePages
                 //collect the needed data
                 string playlistname = PlaylistName.Text;
                 //string username = User.Identity.Name;//comes from security
-                string username = "HansenB";
+                string username = User.Identity.Name;
                 MessageUserControl.TryRun(() =>
                 {
                     PlaylistTracksController sysmgr = new PlaylistTracksController();
